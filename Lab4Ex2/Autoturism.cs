@@ -19,9 +19,10 @@ namespace Lab4Ex2
             this.capacitateCilindrica = capacitateCilindrica;
         }
 
-        public void GetDescription()
+        public string GetDescription()
         {
-            Console.WriteLine($"{marca}, {numarInmatriculare}, {capacitateCilindrica}");
+            string descriere = $"Marca: {marca}, Numar de inmatriculare: {numarInmatriculare}, capacitate cilindrica: {capacitateCilindrica}";
+            return descriere;
         }
     }
 }

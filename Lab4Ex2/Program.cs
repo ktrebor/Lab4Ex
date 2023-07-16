@@ -17,11 +17,11 @@ Creeati doua obiecte de tipul autoturism in functia “Main” apelati le metode
         {
             Autoturism vehiculPersonal = new Autoturism("Mazda", "SB12AAA", 1599);
 
-            vehiculPersonal.GetDescription();
+            Console.WriteLine(vehiculPersonal.GetDescription());
 
             Autoturism vehiculServiciu = new Autoturism("Skoda", "SB22BBB", 1002);
 
-            vehiculServiciu.GetDescription();
+            Console.WriteLine(vehiculServiciu.GetDescription());
         }
     }
 }
