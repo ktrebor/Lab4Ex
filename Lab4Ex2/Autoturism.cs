@@ -21,8 +21,7 @@ namespace Lab4Ex2
 
         public string GetDescription()
         {
-            string descriere = $"Marca: {marca}, Numar de inmatriculare: {numarInmatriculare}, capacitate cilindrica: {capacitateCilindrica}";
-            return descriere;
+            return $"Marca: {marca}, Numar de inmatriculare: {numarInmatriculare}, capacitate cilindrica: {capacitateCilindrica}";
         }
     }
 }

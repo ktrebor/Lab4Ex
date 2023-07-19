@@ -23,30 +23,31 @@ namespace Lab4Ex3
         public string GetDescription()
         {
             StringBuilder descriere = new StringBuilder();
-
-            string mesajPasager = string.Empty;
+            descriere.Append($"Marca: {marca}, Numar de inmatriculare: {numarInmatriculare}, capacitate cilindrica: {capacitateCilindrica}. ");
+            descriere.Append($"Pasageri: ");
 
             if (listaPasageri.Count > 0)
             {
                 foreach (var pasager in listaPasageri)
                 {
-                    mesajPasager = string.Join(", ", listaPasageri);
+                    //descriere.Append(string.Join(", ", listaPasageri));//fa-o aici cu stringbuilder
+                    descriere.AppendJoin(',', pasager);
                 }
-            } 
+            }
             else
             {
-                mesajPasager = "Fara pasageri ";
+                descriere.Append("Fara pasageri ");
             }
-
-            descriere.Append($"Marca: {marca}, Numar de inmatriculare: {numarInmatriculare}, capacitate cilindrica: {capacitateCilindrica}. ");
-            descriere.Append($"Pasageri: {mesajPasager}, ");
 
             return descriere.ToString();
         }
 
         public void AdaugaPasager(string pasager)
         {
-            listaPasageri.Add(pasager);
+            if (!listaPasageri.Contains(pasager))
+            {
+                listaPasageri.Add(pasager);
+            }
         }
 
         public void StergePasager(string pasager)
