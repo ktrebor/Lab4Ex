@@ -22,6 +22,8 @@ namespace Lab4Ex3
 
         public string GetDescription()
         {
+            StringBuilder descriere = new StringBuilder();
+
             string mesajPasager = string.Empty;
 
             if (listaPasageri.Count > 0)
@@ -36,9 +38,10 @@ namespace Lab4Ex3
                 mesajPasager = "Fara pasageri ";
             }
 
-            string descriere = $"Marca: {marca}, Numar de inmatriculare: {numarInmatriculare}, capacitate cilindrica: {capacitateCilindrica}. Pasageri: {mesajPasager}, ";
+            descriere.Append($"Marca: {marca}, Numar de inmatriculare: {numarInmatriculare}, capacitate cilindrica: {capacitateCilindrica}. ");
+            descriere.Append($"Pasageri: {mesajPasager}, ");
 
-            return descriere;
+            return descriere.ToString();
         }
 
         public void AdaugaPasager(string pasager)
